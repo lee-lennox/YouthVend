@@ -1,8 +1,8 @@
 package za.ac.youthVend.domain;
 
 import jakarta.persistence.*;
-@Table(name = "user")
 @Entity
+@Table(name = "\"user\"")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -12,10 +12,9 @@ public class User {
     protected String email;
     protected String password;
 
-    public User(String email, Long id, String name, String password) {
+    public User(String email, String fullName, String password) {
         this.email = email;
-        this.userId = id;
-        this.fullName = name;
+        this.fullName = fullName;
         this.password = password;
     }
 

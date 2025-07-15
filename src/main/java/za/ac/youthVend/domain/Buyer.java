@@ -14,8 +14,9 @@ public class Buyer extends User {
     private List<Order> orders;
 
     public Buyer(Builder builder) {
-        super(builder.email, builder.userId, builder.fullName, builder.password);
+        super(builder.email,  builder.fullName, builder.password);
     }
+
 
     protected Buyer() {}
 
@@ -36,17 +37,11 @@ public class Buyer extends User {
 
     public static class Builder {
         private String email;
-        private Long userId;
         private String fullName;
         private String password;
 
         public Builder setEmail(String email) {
             this.email = email;
-            return this;
-        }
-
-        public Builder setUserId(Long userId) {
-            this.userId = userId;
             return this;
         }
 
@@ -62,7 +57,6 @@ public class Buyer extends User {
 
         public Builder copy(Buyer buyer) {
             this.email = buyer.email;
-            this.userId = buyer.userId;
             this.fullName = buyer.fullName;
             this.password = buyer.password;
             return this;
@@ -72,4 +66,5 @@ public class Buyer extends User {
             return new Buyer(this);
         }
     }
+
 }

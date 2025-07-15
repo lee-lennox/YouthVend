@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class CatagoryFactoryTest {
     @Test
     void testCreateCategory() {
-        Category category = CatagoryFactory.createCategory("Clothing");
+        Category category = CategoryFactory.createCategory("Clothing");
 
         assertNotNull(category);
         assertEquals("Clothing", category.getName());

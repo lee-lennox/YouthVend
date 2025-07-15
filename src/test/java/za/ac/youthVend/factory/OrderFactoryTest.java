@@ -24,7 +24,7 @@ class OrderFactoryTest {
 
         Buyer buyer = new Buyer.Builder()
                 .setEmail("buyer@youthvend.com")
-                .setUserId(2L)
+
                 .setFullName("Buyer Gal")
                 .setPassword("buy123")
                 .build();

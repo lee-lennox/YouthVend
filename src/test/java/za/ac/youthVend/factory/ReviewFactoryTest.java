@@ -10,7 +10,7 @@ class ReviewFactoryTest {
     @Test
     void testCreateReview() {
         Buyer buyer = new Buyer.Builder()
-                .setUserId(2L)
+
                 .setEmail("buyer@youthvend.com")
                 .setFullName("Buyer One")
                 .setPassword("buyerpass")

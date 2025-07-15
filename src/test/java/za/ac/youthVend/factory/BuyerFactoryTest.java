@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class BuyerFactoryTest {
     @Test
     void testCreateBuyer() {
-        Buyer buyer = BuyerFactory.createBuyer("buyer@youthvend.com", 4L, "Youth Buyer", "securepass");
+        Buyer buyer = BuyerFactory.createBuyer("buyer@youthvend.com", "lennox", "Youth Buyer");
 
         assertNotNull(buyer); // ✅ will pass
         assertEquals("buyer@youthvend.com", buyer.getEmail());

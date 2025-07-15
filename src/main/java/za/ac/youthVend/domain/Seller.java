@@ -15,7 +15,7 @@ public class Seller extends User {
     private List<Products> products;
 
     public Seller(Builder builder) {
-        super(builder.email, builder.userId, builder.fullName, builder.password);
+        super(builder.email,  builder.fullName, builder.password);
         this.businessName = builder.businessName;
         this.verified = builder.verified;
     }
