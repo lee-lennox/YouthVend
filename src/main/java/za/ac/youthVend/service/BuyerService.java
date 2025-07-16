@@ -24,7 +24,7 @@ public class BuyerService implements IBuyerService {
 
     @Override
     public List<Buyer> findAll() {
-        return repository.findAll(); // ✅ FIXED
+        return repository.findAll();
     }
 
     @Override
@@ -34,16 +34,16 @@ public class BuyerService implements IBuyerService {
 
     @Override
     public void deleteById(Long id) {
-        repository.deleteById(id); // ✅ FIXED
+        repository.deleteById(id);
     }
 
     @Override
     public Buyer read(Long id) {
-        return repository.findById(id).orElse(null); // ✅ FIXED
+        return repository.findById(id).orElse(null);
     }
 
     @Override
     public Optional<Buyer> findByEmail(String email) {
-        return repository.findByEmail(email); // ✅ You must implement this in the repository too
+        return repository.findByEmail(email);
     }
 }
