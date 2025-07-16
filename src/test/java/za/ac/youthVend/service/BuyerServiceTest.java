@@ -23,7 +23,7 @@ class BuyerServiceTest {
 
         Buyer created = buyerService.save(buyer);
         assertNotNull(created);
-        assertNotNull(created.getUserId()); // Important!
+        assertNotNull(created.getUserId());
         System.out.println("Created: " + created);
     }
     @Test
@@ -53,8 +53,6 @@ class BuyerServiceTest {
     void delete() {
         Buyer saved = buyerService.save(buyer); // Ensure customer is saved
         assertNotNull(saved); // Sanity check
-
-
 
     }
 }
