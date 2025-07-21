@@ -36,4 +36,6 @@ class SellerServiceTest {
         assertNotNull(created.getUserId());
         System.out.println(" Seller Created: " + created);
     }
+
+
 }
