@@ -24,23 +24,24 @@ public class CategoryService implements ICategoryService {
 
 
     @Override
-    public List<Category> findAll() {
-        return List.of();
-    }
-
-    @Override
     public Category update(Category category) {
         return repository.save(category);
     }
 
     @Override
-    public void deleteById(Long aLong) {
-
+    public void deleteById(Long id) {
+        repository.deleteById(id);
     }
 
     @Override
-    public Category read(Long aLong) {
-        return null;
+    public List<Category> findAll() {
+        return repository.findAll();
+    }
+
+
+    @Override
+    public Category read(Long id) {
+        return repository.findById(id).orElse(null);
     }
 
     @Override

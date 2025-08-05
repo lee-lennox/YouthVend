@@ -25,20 +25,22 @@ public class OrderService implements IOrderService {
 
 
     @Override
-    public void deleteById(Long aLong) {
-
+    public void deleteById(Long id) {
+        repository.deleteById(id);
     }
-
-    @Override
-    public Order read(Long aLong) {
-        return null;
-    }
-
 
     @Override
     public List<Order> findAll() {
-        return List.of();
+        return repository.findAll();
     }
+
+    @Override
+    public Order read(Long id) {
+        Optional<Order> order = repository.findById(id);
+        return order.orElse(null);
+    }
+
+
 
     @Override
     public Order update(Order order) {

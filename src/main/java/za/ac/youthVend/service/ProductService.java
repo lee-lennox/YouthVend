@@ -35,25 +35,22 @@ public class ProductService implements IProductService {
     }
 
     @Override
-    public void deleteById(Long aLong) {
-
+    public Products read(Long id) {
+        return repository.findById(id).orElse(null);
     }
 
     @Override
-    public Products read(Long aLong) {
-        return null;
-    }
-
-
-    @Override
-    public List<Products> findByNameContainingIgnoreCase(String sellerName) {
-        return repository.findByNameContainingIgnoreCase(sellerName);
+    public void deleteById(Long id) {
+        repository.deleteById(id);
     }
 
     @Override
     public List<Products> findBySellerId(Long sellerId) {
-        return List.of();
+        return repository.findBySeller_UserId(sellerId);
     }
-
+    @Override
+    public List<Products> findByNameContainingIgnoreCase(String sellerName) {
+        return repository.findByNameContainingIgnoreCase(sellerName);
+    }
 
 }

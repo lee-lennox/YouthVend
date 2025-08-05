@@ -39,7 +39,6 @@ public class Seller extends User {
         return "Seller{" +
                 "businessName='" + businessName + '\'' +
                 ", verified=" + verified +
-                ", products=" + products +
                 ", userId=" + userId +
                 ", fullName='" + fullName + '\'' +
                 ", email='" + email + '\'' +

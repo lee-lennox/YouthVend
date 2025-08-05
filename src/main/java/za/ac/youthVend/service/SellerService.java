@@ -35,13 +35,13 @@ public class SellerService implements ISellerService {
     }
 
     @Override
-    public void deleteById(Long aLong) {
-
+    public Seller read(Long id) {
+        return repository.findById(id).orElse(null);
     }
 
     @Override
-    public Seller read(Long aLong) {
-        return null;
+    public void deleteById(Long id) {
+        repository.deleteById(id);
     }
 
     @Override
